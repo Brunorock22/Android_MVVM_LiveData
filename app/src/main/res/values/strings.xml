@@ -3,4 +3,7 @@
 
     <!--    Books Activity-->
     <string name="book_title">New York Books</string>
+    <!--    Book Details Activity-->
+    <string name="book_details_title_label">Title</string>
+    <string name="book_details_description_label">Description</string>
 </resources>

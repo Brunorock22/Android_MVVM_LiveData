@@ -26,7 +26,8 @@ class BooksViewModel : ViewModel() {
                         for (results in bookBodyResponse.bookResults) {
                             val book: Book = Book(
                                 title = results.bookDetalis[0].title,
-                                author = results.bookDetalis[0].author
+                                author = results.bookDetalis[0].author,
+                                description = results.bookDetalis[0].description
                             )
                             books.add(book)
                         }
@@ -43,7 +44,4 @@ class BooksViewModel : ViewModel() {
         })
     }
 
-    fun creatFackBooks(): List<Book> {
-        return listOf(Book("Title", "Author"), Book("Title", "Author"))
-    }
 }
