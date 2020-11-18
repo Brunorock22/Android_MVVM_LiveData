@@ -16,7 +16,7 @@ class BookDetailsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_details)
-        setupToolbar(toolbarMain, R.string.book_details_title)
+        setupToolbar(toolbarMain, R.string.book_details_title, true)
         val title = intent.getStringExtra(EXTRA_TITLE)
         val description = intent.getStringExtra(EXTRA_DESCRIPTION)
 

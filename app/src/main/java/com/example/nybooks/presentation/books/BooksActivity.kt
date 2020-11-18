@@ -48,7 +48,14 @@ class BooksActivity : BaseActivity() {
 
         viewModel.getBooks()
 
+        viewModel.viewFlipperLiveData.observe(this, Observer {
+            it?.let { viewFlipper ->
+                viewFlipperBooks.displayedChild = viewFlipper.first
+                viewFlipper.second?.let { errorMessageResId ->
+                    textViewError.text = getString(errorMessageResId)
+                }
+            }
+        })
+
     }
-
-
 }
